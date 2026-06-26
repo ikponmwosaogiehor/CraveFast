@@ -1,0 +1,1343 @@
+:root{
+    --button-color: #FFB703;
+    --button-txt: #2d2d2d;
+    /* #ff6b35 */
+    --logo-color: #801801;
+    --paragraph-color: #943610;   
+    --body-color: #f7ddd5;
+    --span-color: #f4c6b6;
+    --card-color: #fff8f6;
+    /* fff8f0 */
+    /* --icn-color: #802801; */
+    /* color: #2d2d2d */
+}
+    /* --button-color: #FF5100;     Punchy, high-energy vibrant flame orange */
+    /* --button-txt: #1C1B19;       Deep charcoal off-black for clean text contrast */
+    /* --logo-color: #1C1B19;       Striking charcoal for prominent brand lettering */
+    /* --paragraph-color: #1C1B19;  Sharp charcoal for primary heading typography    */
+    /* --body-color: #FDFBF7;       Fresh, modern warm cream background instead of muddy pink */
+    /* --span-color: #FFB703;       Warm energetic amber for promotional highlights and badges */
+    /* --card-color: #FFFFFF;       Crisp pure white so your product and review cards pop cleanly */
+
+
+html,
+body{
+    overflow-x:hidden;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: candara, sans-serif;
+}
+p{
+    color: var(--button-txt);
+    /* font-weight: 500; */
+}
+
+
+a:hover{
+    color: var(--paragraph-color);
+}
+
+.header_sec header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.726);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}
+
+header .menu_header{
+    display: flex;
+    align-items: center;
+    color: var(--paragraph-color);
+    font-size: 23px;
+    font-weight: bolder;
+}
+.nav ul{
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a{
+    color: black;
+}
+
+.nav a:hover{
+    color: #802801;
+}
+
+.log_in{
+    display: flex;
+    gap: 1rem;
+}
+
+
+.log_in li{
+    padding: 0.5rem;
+    background-color: var(--button-color);
+    color: var(--button-txt);
+    border-radius: 20px;
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+}
+
+.log_in li:hover{
+    transform: scale(0.9);
+}
+
+.log_in a{
+    color: var(--button-txt);
+}
+
+.log_in a:hover{
+    color: var(--button-txt);
+}
+
+
+.submenu{
+    position: fixed;
+    top: 3.5rem;
+    right: 0;
+    background-color: #fff8f6b0;
+    backdrop-filter: blur(15px);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.8s ease, opacity 0.4s ease;
+    z-index: 50;
+}
+
+.submenu nav ul{
+    display: block;
+    padding: 1rem;
+}
+
+.submenu nav ul li{
+    margin: 1rem 0 1rem 0;
+    border-bottom: 1px solid var(--button-txt);
+    transition: 0.3s all ease-in-out;
+}
+
+.submenu nav ul li:hover{
+    transform: scale(1.1);
+    color: var(--button-txt);
+}
+.submenu nav ul li a{
+    color: var(--button-txt);
+    padding: 0.5rem;
+    display: inline-block;
+    width: stretch;
+}
+
+header label{
+    display: none;
+}
+#toggle{
+    display: none;
+}
+
+/* this means that whenever the toogle has been clicked and is now checked, give the submenu this properties */
+#toggle:checked ~ .submenu{
+    max-height: 500px;
+    opacity: 1;
+}
+
+
+
+
+.head_order{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head_order a{
+    padding: 0.5rem;
+    background-color: var(--button-color);
+    color: var(--button-txt);
+    border-radius: 20px;
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+}
+
+.head_order a:hover{
+    transform: scale(0.9);
+}
+
+.intro_sec{
+    margin-top: 4rem;
+    background-image: url(../img/burger/ChatGPT\ Image\ Jun\ 26\,\ 2026\,\ 12_20_37\ AM.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 95vh;
+}
+
+.intro_info{
+    padding: 1rem;
+}
+
+.intro_img{
+    /* background: linear-gradient(95deg, white, transparent, transparent); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5));
+    width: stretch;
+    height: 95vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.intro_sec .intro_head{
+    width: 45%;
+}
+
+.intro_head .intro_begin{
+    margin: 2rem 0;
+    background-color: var(--span-color);
+    color: var(--logo-color);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.intro_head h2 span{
+    display: block;
+    font-size: 36px;
+    font-weight: bolder;
+    color: white;
+}
+
+.intro_head h2 span:nth-child(2){
+    color: white;
+}
+.intro_head .intro_txt{
+    margin-top: 1rem;
+    color: white;
+}
+
+.order_now{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.order_now .order{
+    padding: 0.6rem 1.5rem;
+    background-color: var(--button-color);
+    color: var(--button-txt);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+}
+
+.order_now .order_video{
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--button-color);
+    color: var(--button-color);
+    border-radius: 10px;
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+}
+
+.order_now .order:hover,
+.order_now .order_video:hover{
+    transform: scale(0.9);
+}
+
+.order_steps{
+    background-color: var(--body-color);
+    padding: 5rem 0 2rem;
+    position: relative;
+}
+
+.order_steps .order_intro{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_steps .order_intro h2{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.order_intro_img{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_intro img{
+    width: auto;
+    height: 150px;
+    background-color: transparent;
+    margin: 0 3rem;
+    animation: order_img 3s ease-in-out 1s infinite alternate both;
+}
+
+.order_img2{
+    display: none;
+}
+
+@keyframes order_img {
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.1);
+    }
+    
+}
+
+
+/* .order_intro img */
+
+/* .order_img{
+    display: flex;
+    margin: 0 3rem;
+    justify-content: space-between;
+} */
+
+.order_steps .order_msg{
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.order_steps .order_cards{
+    padding: 2rem;
+    width: 15rem;
+    background-color: var(--card-color);
+    border-radius: 10px;
+}
+
+.order_cards:hover{
+    box-shadow: 0px 0px 50px #c1bab7;
+}
+
+.order_cards i{
+    padding: 0.75rem;
+    font-size: 22px;
+    margin-bottom: 1rem;
+    background-color: #f4c6b6;
+    border-radius: 50%;
+    color: #802801;
+}
+
+.order_cards h3{
+    margin-bottom: 1rem;
+}
+
+.menu_begin{
+    background-color: var(--card-color);
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.menu_begin h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.menu_begin .menu_begin_txt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_begin_txt a{
+    font-weight: bolder;
+}
+
+.menu_carousel{
+    padding: 1rem;
+    margin-top: 3rem;
+    /* display: flex; */
+    justify-content: space-between;
+    /* gap: 1rem; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    /* width: 100%; */
+    overflow: hidden;
+
+/*     
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #000;
+        padding-bottom: 1rem; */
+}
+
+.menu_carousel .menu_intro_cards{
+    /* text-align: center;
+    background-color: beige; */
+    /* height: 20rem; */
+    /* width: 14rem;
+    border-radius: 10px;
+    justify-content: space-around;
+    position: relative;
+    padding-bottom: 4rem;
+    padding: 1rem;  */
+
+
+
+    margin: 1.5rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+    transition: 0.3s all ease-in-out;
+}
+
+
+
+
+.menu_carousel .menu_intro_cards:hover{
+    box-shadow: 0px 0px 10px var(--paragraph-color);
+}
+
+.menu_intro_cards .menu_img{
+    /* width: 100%; */
+    background-position: center;
+    background-size: cover;
+    height: 12rem;
+    /* background-color: #ff6b35; */
+    border-radius: 5px 5px 0 0;
+    /* transition: 0.3s all ease-in-out; */
+}
+
+.menu_intro_cards:nth-child(1) .menu_img{
+    background-image: url(../img/welcome_burger.png);
+}
+.menu_intro_cards:nth-child(2) .menu_img{
+    background-image: url(../img/Nigerian\ AI\ generated\ jollof\ rice.jfif);
+}
+
+.menu_intro_cards:nth-child(3) .menu_img{
+    background-image: url(../img/WhatsApp\ Image\ 2026-06-22\ at\ 8.38.26\ PM.jpeg);
+}
+
+.menu_intro_cards:nth-child(4) .menu_img{
+    background-image: url(../img/4996249583905064.jfif);
+}
+
+
+.menu_intro_cards p{
+        text-align: center;
+        flex-grow: 1;
+        margin: 0.5rem;
+}
+
+.menu_intro_cards .intro_card_head{
+    /* margin: 1rem 0; */
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro_card_head span{
+    /* color: red; */
+    
+        font-weight: bold;
+        color: var(--button-txt);
+}
+
+
+/* .menu_intro_cards a{
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--button-color);
+    color: var(--paragraph-color);
+    border-radius: 20px;
+}  */
+
+.menu_intro_cards a{
+    /* position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;
+    width: max-content;
+
+    padding: 1rem;
+    background-color: var(--button-color);
+    color: var(--paragraph-color);
+    border-radius: 20px; */
+
+    
+        width: fit-content;
+        margin-top: auto;
+        /* background-color: #ff480033; */
+        align-self: center;
+         padding: 1rem;
+    background-color: var(--button-color);
+    color: var(--button-txt);
+    border-radius: 20px; 
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+}
+
+.menu_intro_cards a:hover{
+    transform: scale(0.9);
+}
+
+.review{
+    padding: 2rem;
+    background-color: var(--body-color);
+}
+
+.review h2{
+    text-align: center;
+}
+
+.review_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1rem;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+.review_container .review_cards{
+    background-color: var(--card-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.review_cards i{
+    color: #ab3500;
+}
+
+.review_cards p{
+    color: black;
+}
+
+.review_cards .review_txt{
+    margin: 1rem 0;
+}
+
+.invite{
+    /* background-image: url(../img/11751649023408374.jfif); */
+    background-color: var(--card-color);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.invite h2{
+    padding-bottom: 1rem;
+}
+
+.invite p{
+    padding-bottom: 2rem;
+}
+
+.invite form{
+    display: inline-flex;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.invite form input{
+    padding: 0.75rem;
+    background-color: #eee;
+    border: none;
+    border-radius: 10px;
+}
+
+.invite form input:focus-visible{
+    outline: none;
+}
+
+.invite form a{
+    padding: 0.75rem 1.25rem;
+    background-color: var(--button-color);
+    color: var(--button-txt);
+    border-radius: 10px; 
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+}
+
+.invite form a:hover{
+    transform: scale(0.9);
+}
+
+footer{
+    padding: 2rem 1rem;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--body-color);
+    /* justify-content: space-between; */
+}
+
+.footer_name{
+    width: 40%;
+}
+
+.footer_links{
+    width: stretch;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_links a{
+    color: var(--button-txt);
+}
+
+
+.footer_links a:hover{
+    color: var(--logo-color);
+}
+
+.footer_name h3,
+.footer_links h3{
+    margin-bottom: 1rem;
+}
+
+
+
+.end{
+    text-align: center;
+}
+
+/* about section styling starts now */
+
+.about_intro_sec{
+    display: flex;
+    margin-top: 4rem;
+    padding: 1rem;
+    background-image: url(../img/drinks/ChatGPT\ Image\ Jun\ 26\,\ 2026\,\ 12_20_48\ AM.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+.about_intro{
+    width: 30%;
+    color: white;
+    align-content: center;
+}
+
+.about_intro_head h2 span{
+    display: block;
+    line-height: 1.5;
+}
+
+.about_intro p{
+    /* margin-top: 1rem; */
+    color: white;
+}
+
+.about_txt_sec{
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    background-color: var(--card-color);
+}
+
+.about_txt_sec h2{
+    text-align: center;
+}
+
+.about_txt_sec .about_msg{
+    width: 50%;
+}
+
+.about_msg  p{
+   font-size: 18px; 
+   margin: 0.5rem;
+}
+
+.about_txt_sec .about_img{
+    width: 50%;
+}
+
+.about_txt_sec img{
+    /* width: 50%; */
+    
+    /* display: block; */
+    object-fit: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+.about_desc{
+    background-color: var(--body-color);
+    padding: 3rem 1rem;
+}
+
+.about_desc .about_desc_intro{
+    text-align: center;
+}
+
+.about_desc .about_desc_intro h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.about_card_sec{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: space-around;
+}
+
+
+.about_cards{
+    padding: 1rem;
+    width: 15rem;
+    text-align: center;
+    gap: 2rem;
+    border: 1px solid var(--card-color);
+    background-color: var(--card-color);
+    transition: 0.3s all ease-in-out;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+
+.about_cards:hover{
+    transform: translateY(-1rem);
+}
+
+.about_cards i{
+    padding: 0.75rem;
+    font-size: 22px;
+    margin-bottom: 1rem;
+    background-color: #f4c6b6;
+    border-radius: 50%;
+    color: #802801;
+}
+
+.about_cards:nth-child(1) i{
+    color: var(--button-txt);
+    background-color: var(--button-color);
+
+}
+.about_cards:nth-child(2) i{
+    background-color: var(--button-txt);
+    color: var(--button-color);
+    
+}
+.about_cards:nth-child(3) i{
+    background-color: #c2d4fd;
+    color: #212d87;
+}
+
+
+.about_cards h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about_chef{
+    background-color: var(--card-color);
+}
+
+.chef_card{
+    border: 1px solid #3d3d3d;
+    background-color: var(--card-color);
+    padding: 2rem;
+    display: flex;
+    padding: 2rem 1rem;
+}
+
+.chef_card .chef_pic img{
+    width: 250px;
+    height: 250px;
+    border: 1px solid #3d3d3d;
+}
+
+.chef_info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.chef_info p span{
+    background-color: var(--span-color);
+    color: var(--logo-color);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.chef_info h2{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.chef_info i{
+    color: var(--paragraph-color);
+}
+
+.chef_txt p{
+    font-size: 20px;
+}
+
+
+/* menu styling starts now */
+
+.menu_body{
+    background-color: var(--body-color);
+    /* padding: 1rem; */
+}
+
+.menu_layout{
+    display: flex;
+    /* grid-template-columns: 300px 1fr; */
+    gap: 2rem;
+    width: 98%;
+    /* min-height: 100vh; */
+    /* margin: auto; */
+}
+
+.menu_content{
+    width: 75%;
+    margin-left: 32%;
+    /* overflow: hidden; */
+}
+
+.food_grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:1.5rem;
+}
+
+.food_details{
+    padding: 1rem;
+    gap: 1rem;
+    /* display: flex;
+    flex-direction: column;  */
+    /* justify-content: space-between;  */
+}
+
+.food_details h3{
+    margin-bottom: 4rem;
+    font-size: 22px;
+}
+
+.food_details span{
+    font-size: 18px;
+    font-weight: bolder;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.food_details button{
+    padding: 0.5rem;
+    background: var(--button-color);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+
+.food_details button:hover{
+    background-color: var(--paragraph-color);
+}
+
+.food_details i{
+    font-size: 20px;
+}
+
+
+.food_card{
+    display:grid;
+
+    grid-template-columns:1.75fr 1fr;
+    min-height: 180px;
+    border:1px solid var(--card-color);
+    border-radius:12px;
+    background-color: var(--card-color);
+    overflow:hidden;
+    transition: 0.3s all ease-in-out;
+}
+
+.food_card:hover{
+    box-shadow: 0px 0px 10px var(--paragraph-color);
+}
+
+.food_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurant_info{
+    background-color: var(--card-color);
+    /* background-color: var(--card-color); */
+    padding: 1rem;
+    width: 25%;
+    height: 100vh;
+    /* border-radius: 12px; */
+/* height: 100vh; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* align-self: start; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.restaurant_info h1{
+    color: var(--paragraph-color);
+}
+
+
+
+.menu_nav{
+    display: block;
+}
+
+
+.menu_nav li{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--card-color);
+    transition: 0.3s all ease-in-out;
+}
+
+.menu_nav a:hover{
+    border-bottom: 1px solid var(--button-txt);
+    color: var(--paragraph-color);
+}
+
+.menu_nav li a{
+    display: block;
+    font-size: 24px;
+    color: var(--button-txt);
+}
+
+
+.search_bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.search_bar label{
+    display: none;
+}
+
+.search_bar input{
+    padding: 0.5rem;
+    font-size: 18px;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+
+.menu_categories{
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    /* background-color: white; */
+}
+
+.menu_categories a{
+    border-bottom: 2px solid var(--body-color);
+    color: var(--button-txt);
+}
+
+.menu_categories a:hover{
+    border-bottom: 2px solid var(--logo-color);
+}
+
+.cart_btn{
+    display: flex;
+    background-color: var(--button-color);
+    color: var(--button-txt);
+    width: fit-content;
+    padding: 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    transition: 0.3s all ease-in-out;
+    gap: 0.5rem;
+}
+
+.cart_btn:hover{
+    color: var(--button-txt);
+    transform: scale(0.9);
+}
+
+
+.food_header{
+    margin: 2rem 0;
+}
+
+
+/* .food_grid img{
+    width: 240px;
+    height: 240px;
+} */
+   
+
+
+
+
+
+
+
+
+
+/* registration styling for login page and sign up page */
+
+.login_sec{
+    background-color: var(--body-color);
+    height: 100vh;
+    align-content: center;
+}
+
+.login_head{
+    text-align: center;
+}
+
+.login_head h1{
+    margin: 1rem 0;
+    color: var(--paragraph-color);
+}
+
+.login_head i{
+    font-size: 20px;
+    color: var(--paragraph-color);
+}
+
+.mneu_body{
+    background-color: var(--body-color);
+}
+
+.reg_container{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+
+
+.login_box{
+    background-color: var(--card-color);
+    padding: 2rem;
+    border: 1px solid #3d3a3a;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 6px #0088cfde; */
+}
+
+.login_box:hover{
+    border: 1px solid #c1bab7;
+    box-shadow: 0px 0px 20px #c1bab7;
+}
+
+.intro_log{
+    text-align: center;
+}
+.intro_log i{
+    color: var(--logo-color);
+}
+
+.login_box form{
+    margin-top: 1.5rem;
+}
+
+.form-group{
+    margin: 1rem 0 1rem 0;
+}
+
+.form-group label{
+    display: block;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input{
+    width: stretch;
+    font-size: 15px;
+    padding: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+    border: 1px;
+    border-radius: 9px;
+    background-color: var(--body-color);
+}
+
+.form-group select:focus-visible,
+.form-group input:focus-visible{
+    outline: none;
+}
+
+.reg_btn_sec{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.reg_btn_sec .forgot_pass,
+.form-group button{
+    background: var(--button-color);
+    color: var(--button-txt);
+    border-radius: 9px;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+.reg_btn_sec .forgot_pass:hover{
+    transform: scale(0.95);
+}
+.form-group button:hover{
+    transform: scale(0.95);
+}
+
+.regs{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+.regs a{
+    color: #0088cfde;
+}
+
+.regs a:hover{
+    text-decoration: underline #0088cfde;
+}
+
+
+
+
+/* media query strats now */
+
+@media (max-width:768px){
+    
+    header label{
+        display: block;
+        cursor: pointer;
+    }
+    
+    header .nav,
+    .log_in,
+    .head_order_link{
+        display: none;
+    }
+
+    .order_intro{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .order_intro img{
+        margin:0;
+        width:120px;
+        height:auto;
+    }
+    .order_txt_img{
+        display: none;
+    }
+    .order_img2{
+        display: flex;
+    }
+
+}
+
+
+@media (max-width:640px) {
+    .order_msg{
+        flex-wrap: wrap;
+    }
+    .about_txt_sec{
+        display: block;
+    }
+    .about_txt_sec .about_msg,
+    .about_txt_sec .about_img{
+        width: 100%;
+    }
+
+    .restaurant_info{
+        display: none;
+    }
+    .menu_content{
+        width: 100%;
+        margin: 5%;
+    }
+        
+    .search_bar label{
+        display: block;
+    }    
+
+    .search_bar {
+    display: flex;
+    justify-content: space-around;
+    }
+}
+
+@media (max-width:550px) {
+    
+    footer,
+    end{
+        width: 100%;
+        margin-left: 1%;
+    }
+
+
+    .restaurant_info{
+        display: none;
+    }
+    
+    .menu_content{
+        width: 100%;
+        margin: 5%;
+    }
+    
+    .order_intro_img{
+        display: flex;
+        gap: 4rem;
+    }
+
+    
+}
+
+@media (max-width:490px){
+    header .nav{
+        display: none;
+    }
+    .chef_card{
+        display: block;
+    }
+    .chef_card .chef_pic img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width:380px){
+    .order_intro img{
+        display: none;
+    }
+
+    .intro_head .intro_begin{
+        margin-top: 5rem;
+    }
+    .order_intro_img img{
+        display: flex;
+        gap: 4rem;
+    }
+    .menu_intro_cards{
+    width:100%;
+    margin:0;
+    }
+    .food_card{
+        grid-template-columns:1fr 1fr;
+
+    }
+    .order_now{
+        margin-bottom: 5rem;
+    }
+    .header_sec header{
+        height: 35px;
+    }
+    .search_bar {
+    display: block;
+    }
+
+    
+    .search_bar i{
+    display: block;
+    margin: 1rem 0;
+    /* width: 100%; */
+    }
+}
+
+@media (max-width:320px) {
+    .intro_sec .intro_head {
+        width: 60%;
+    }
+
+    .order_now{
+        margin-bottom: 5rem;
+    }
+    .invite{
+        padding: 2rem;
+    }
+    .invite form{
+        gap: 1rem;
+    }
+    .invite form a{
+        padding: 0.5rem 1rem;
+    }
+    
+    .search_bar input{
+        display: none;
+    }
+    footer{
+        display: block;
+    }
+    .footer_name{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:290px) {
+    .intro_head .intro_begin{
+        display: none;
+    }
+    .intro_head h2{
+        margin-top: 1rem;
+    }
+    
+    .order_intro_img{
+        display: flex;
+        gap: 1rem;
+    }
+    .menu_header h1{
+        font-size: 30px;
+    }
+}
