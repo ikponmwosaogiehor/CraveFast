@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="shortcut icon" href="./asset/img/favicon/favicon_io/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body class="login_body">
 <section class="login_sec">
     <!-- <header>
         <div class="icn_menu">
@@ -20,9 +20,14 @@
         </div>
 
     </header> -->
+    <a title="Go back to home" class="back_btn" href="./index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
 
     <section class="login_head">
-            <img src="./asset/img/favicon/ChatGPT Image Jun 26, 2026, 08_16_59 AM.png" width="50px" height="50px" alt="">
+        <a class="back_btn" href="./index.html">
+            <img src="./asset/img/favicon/logo/ChatGPT Image Jun 26, 2026, 08_16_59 AM.png" alt="">
+        </a> 
         <h1>CraveFast</h1>
         <p>Feul your hunger in seconds</p>
     </section>
@@ -47,13 +52,14 @@
                     >                    
                 </div>
                 <div class="form-group reg_btn_sec">
-                    <button name="submit" type="submit">Login</button>
+                    <!-- <a class="login_btn" href="./index.html">Login</a> -->
+                    <button onclick="alert('Form Submitted!')" name="submit" type="submit">Login</button>
                     <p>OR</p>
                     <!-- <button name="submit" type="submit">Forgot Password</button> -->
                     <a class="forgot_pass" href="">Forgot Password</a>
                 </div>
                 <div class="regs">
-                    <h>Not a member? <a href="./signup.html">Sign Up</a></h4>
+                    <p>Not a member? <a href="./signup.html">Sign Up</a></p>
                 </div>
             </div>
         </form>

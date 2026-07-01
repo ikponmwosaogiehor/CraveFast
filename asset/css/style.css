@@ -180,7 +180,7 @@ header label{
 
 .intro_sec{
     margin-top: 4rem;
-    background-image: url(../img/burger/ChatGPT\ Image\ Jun\ 26\,\ 2026\,\ 12_20_37\ AM.png);
+    background-image: url(../img/background/ChatGPT\ Image\ Jun\ 26\,\ 2026\,\ 12_20_37\ AM.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -432,18 +432,18 @@ header label{
 }
 
 .menu_intro_cards:nth-child(1) .menu_img{
-    background-image: url(../img/welcome_burger.png);
+    background-image: url(../img/burger/welcome_burger.png);
 }
 .menu_intro_cards:nth-child(2) .menu_img{
-    background-image: url(../img/Nigerian\ AI\ generated\ jollof\ rice.jfif);
+    background-image: url(../img/main/Nigerian\ AI\ generated\ jollof\ rice.jfif);
 }
 
 .menu_intro_cards:nth-child(3) .menu_img{
-    background-image: url(../img/WhatsApp\ Image\ 2026-06-22\ at\ 8.38.26\ PM.jpeg);
+    background-image: url(../img/others/WhatsApp\ Image\ 2026-06-22\ at\ 8.38.26\ PM.jpeg);
 }
 
 .menu_intro_cards:nth-child(4) .menu_img{
-    background-image: url(../img/4996249583905064.jfif);
+    background-image: url(../img/others/4996249583905064.jfif);
 }
 
 
@@ -637,7 +637,7 @@ footer{
     display: flex;
     margin-top: 4rem;
     padding: 1rem;
-    background-image: url(../img/drinks/ChatGPT\ Image\ Jun\ 26\,\ 2026\,\ 12_20_48\ AM.png);
+    background-image: url(../img/background/ChatGPT\ Image\ Jun\ 26\,\ 2026\,\ 12_20_48\ AM.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -768,7 +768,6 @@ footer{
 }
 
 .chef_card{
-    border: 1px solid #3d3d3d;
     background-color: var(--card-color);
     padding: 2rem;
     display: flex;
@@ -778,7 +777,7 @@ footer{
 .chef_card .chef_pic img{
     width: 250px;
     height: 250px;
-    border: 1px solid #3d3d3d;
+    /* border: 1px solid #3d3d3d; */
 }
 
 .chef_info{
@@ -1025,8 +1024,23 @@ footer{
 
 /* registration styling for login page and sign up page */
 
-.login_sec{
+.back_btn i{
+    padding: 0 1rem;
+    font-size: 24px;
+    color: var(--logo-color);
+    transition: 0.3s all ease-in-out;
+}
+
+.back_btn i:hover{
+    color: var(--button-txt);
+    transform: scale(1.25);
+}
+
+.login_body{
     background-color: var(--body-color);
+}
+
+.login_sec{
     height: 100vh;
     align-content: center;
 }
@@ -1045,8 +1059,19 @@ footer{
     color: var(--paragraph-color);
 }
 
-.mneu_body{
+.login_head img{
+    height: 75px;
+    width: 75px;
+    transition: 0.3s all ease-in-out;
+}
+
+.login_head img:hover{
+    transform: scale(1.25);
+}
+
+.menu_body{
     background-color: var(--body-color);
+    padding: 1rem 0;
 }
 
 .reg_container{
@@ -1115,6 +1140,8 @@ footer{
     align-items: center;
 }
 
+
+.reg_btn_sec .login_btn,
 .reg_btn_sec .forgot_pass,
 .form-group button{
     background: var(--button-color);
@@ -1127,18 +1154,23 @@ footer{
     transition: 0.3s;
 }
 
-.reg_btn_sec .forgot_pass:hover{
-    transform: scale(0.95);
+
+:is(.reg_btn_sec .forgot_pass, .reg_btn_sec .login_btn):hover{
+    transform: scale(0.9);
 }
 .form-group button:hover{
-    transform: scale(0.95);
+    transform: scale(0.9);
 }
 
 .regs{
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-    font-size: 14px;
+    font-size: 16px;
+}
+.regs p{
+    font-size: 16px;
+    font-weight: bold;
 }
 .regs a{
     color: #0088cfde;
@@ -1148,6 +1180,15 @@ footer{
     text-decoration: underline #0088cfde;
 }
 
+.welcome{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.welcome i{
+    font-size: 25px;
+}
 
 
 
@@ -1180,8 +1221,14 @@ footer{
     .order_txt_img{
         display: none;
     }
+    .order_intro_img {
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+    }
     .order_img2{
         display: flex;
+        gap: 5rem;
     }
 
 }
@@ -1222,7 +1269,7 @@ footer{
     footer,
     end{
         width: 100%;
-        margin-left: 1%;
+        /* margin-left: 1%; */
     }
 
 
@@ -1249,6 +1296,9 @@ footer{
     }
     .chef_card{
         display: block;
+    }
+    .chef_info{
+        margin-top: 1rem;
     }
     .chef_card .chef_pic img{
         width: 100%;
@@ -1292,6 +1342,14 @@ footer{
     display: block;
     margin: 1rem 0;
     /* width: 100%; */
+    }
+        
+    .welcome{
+        justify-content: center;
+    }
+
+    .welcome i{
+        display: none;
     }
 }
 
