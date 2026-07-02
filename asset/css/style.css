@@ -802,6 +802,7 @@ footer{
 
 .chef_info i{
     color: var(--paragraph-color);
+    font-size: 24px;
 }
 
 .chef_txt p{
